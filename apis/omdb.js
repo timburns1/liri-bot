@@ -7,7 +7,8 @@ function search(term) {
     //term = "Mr Nobody"
   }
   axios.get(`http://www.omdbapi.com/?t=${term}&apikey=trilogy`).then(res => {
-      console.log(res.data.data);
+      console.log("Title: ", res.data.Title);
+      console.log("Plot: ", res.data.Plot);
     })
     .catch(err => {
       console.log(err);
